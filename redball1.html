@@ -4,28 +4,205 @@
         <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
     <script type="text/javascript">
         function sayhello(){
-            alert('hi there');
+            alert('Work Hard Everyday')
         }
           function moveRight(){
+              if(redball.right== 275) {
+                console.log('right wall hit')
+              }
+              else{
                 redball.left=  redball.left +10;
+              }
             }
-            function moveTop(){
+          function moveTop(){
+              if(redball.top== 0) {
+                console.log('top wall hit');
+              }
+              else{
                 redball.top= redball.top -10;
+              }
             }
             function moveLeft(){
+             if (redball.left== -10) {
+                console.log('left Wall Hit');
+                }
+             else{
                 redball.left= redball.left -10;
+                }
             }      
             function moveBottom(){
-                redball.top= redball.top +10;
+             if(redball.top== 460){
+                console.log('Bottom Hit');
+                }
+             else{
+                 redball.top= redball.top +10;
+                }
+            }   
+            function moveTopRight(){
+                //slide top right//
+                moveTop();
+                moveRight();
             }
-    </script>
+             function moveBottomRight(){
+                //slide bottom right//
+                moveBottom();
+                moveRight();
+             }   
+             function moveBottomleft(){
+                 moveBottom();
+                 moveLeft();
+             }    
+            function moveTopLeft(){
+                moveTop();
+                moveLeft();
+             }
+             
+             function Triangle(){
+                 //slide down right//
+                 moveBottomRight();
+                 moveBottomRight();
+                 moveBottomRight();
+                 moveBottomRight();
+                 moveBottomRight();
+                 //move to the left//
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 //slide to the right//
+                 moveRight();
+                 moveRight();
+                 moveRight();
+                 moveRight();
+                 moveRight();
+             
+                
+            }  
+            function moveSquare(){
+                //slide to the right//
+                moveRight();
+                moveRight();
+                moveRight();
+                moveRight();
+                moveRight();
+                moveRight();
+                moveRight();
+                //slide down//
+                moveBottom();
+                moveBottom();
+                moveBottom();
+                moveBottom();
+                moveBottom();
+                moveBottom();
+                moveBottom();
+                //slide left//
+                moveLeft();
+                moveLeft();
+                moveLeft();
+                moveLeft();
+                moveLeft();
+                moveLeft();
+                moveLeft();
+                //slide up//
+                moveTop();
+                moveTop();
+                moveTop();
+                moveTop();
+                moveTop();
+                moveTop();
+                moveTop();
+                
+                
+            }
+            function Octagon(){
+                moveRight();
+                 moveRight();
+                 moveRight();
+                 moveRight();
+                 moveRight();
+              moveRight()
+                 moveRight()
+                 //slide bottom right//
+                 moveBottom(); moveRight();
+                 moveBottom(); moveRight();
+                 moveBottom(); moveRight();
+                 moveBottom(); moveRight();
+                 moveBottom(); moveRight();
+                 moveBottom(); moveRight();
+                 moveBottom(); moveRight();
+                 //slide down//
+                 moveBottom();
+                 moveBottom();
+                 moveBottom();
+                 moveBottom();
+                 moveBottom();
+                 moveBottom();
+                 moveBottom();
+                 //slide down left//
+                 moveBottom(); moveLeft();
+                 moveBottom(); moveLeft();
+                 moveBottom(); moveLeft();
+                 moveBottom(); moveLeft();
+                 moveBottom(); moveLeft();
+                 moveBottom(); moveLeft();
+                 moveBottom(); moveLeft();
+                 //slide left//
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 moveLeft();
+                 //slide up left//
+                 moveTop(); moveLeft();
+                 moveTop(); moveLeft();
+                 moveTop(); moveLeft();
+                 moveTop(); moveLeft();
+                 moveTop(); moveLeft();
+                 moveTop(); moveLeft();
+                 moveTop(); moveLeft();
+                 //slide up//
+                 moveTop();
+                 moveTop();
+                 moveTop();
+                 moveTop();
+                 moveTop();
+                 moveTop();
+                 moveTop();
+                 //slide up right //
+                 moveTop(); moveRight();
+                 moveTop(); moveRight();
+                 moveTop(); moveRight();
+                 moveTop(); moveRight();
+                 moveTop(); moveRight();
+                 moveTop(); moveRight();
+                 moveTop(); moveRight();
+                                
+            }
+            
+              </script>
 </head>
     <body>
-       <img id="redball" src="http://lrn.icstars.org/redball.jpg"></img>
+       <img id="redball" src="data:image/png;base64,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"></img>
         <button onclick="sayhello()" > Hello World</button>
         <button onclick="moveRight()" > Move Right</button>
         <button onclick="moveBottom()" > Move Bottom</button>
         <button onclick="moveLeft()" >Move Left</button>
         <button onclick="moveTop()">Move Top</button>
+        <button onclick="moveSquare()">move square</button>
+        <button onclick="moveBottomRight()">Move Bottom Right</button>
+        <button onclick="Triangle()">Move Triangle</button>
+        <button onclick="moveTopRight()">Move Top Right</button>
+        <button onclick="Octagon()">Octagon</button>
+        <button onclick=" moveBottomleft()">Move Bottom Left</button>
+        <button onclick="moveTopRight()"> Move Top Left</button>
+        
     </body>
 </html>
